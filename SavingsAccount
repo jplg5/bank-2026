@@ -1,0 +1,21 @@
+public class SavingsAccount : Account
+{
+    
+    
+    public DateTime DateLastWithdraw { get;set; }
+
+
+    public SavingsAccount(string number, double balance, DateTime dateLastWithdraw, Person owner)
+   : base(Number, Balance, Owner)
+    {
+        this.DateLastWithdraw = DateLastWithdraw;
+
+    }
+
+    protected override double CalculInterets()
+    {
+        return Balance * 0.045;
+    }
+
+
+}
