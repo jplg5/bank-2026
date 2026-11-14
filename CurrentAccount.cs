@@ -8,6 +8,10 @@ public class CurrentAccount : Account
     
         : base(Number, Balance, Owner)
     {
+        if (CreditLine <= 0)
+        {
+            throw new ArgumentOutOfRangeException();
+        }
         this.CreditLine = CreditLine;
     }
 
