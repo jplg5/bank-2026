@@ -1,5 +1,9 @@
 public abstract class Account
 {
+
+    public delegate void NegativeBalanceDelegate(Account account);
+
+    public event NegativeBalanceDelegate NegativeBalanceEvent;
     
     public string Number { get; set; }
     public double Balance { get; private set; } 
